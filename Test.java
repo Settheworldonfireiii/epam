@@ -28,7 +28,7 @@ public class Test{
            System.out.println(squarering);
            System.out.println("Testing Ascension");
            int f = reader.nextInt();
-          Ascension.isAsc(f);
+          System.out.println(Ascension.isAsc(f));
            System.out.println("Testing Sum and Product");
            f = reader.nextInt();
           SumAndProduct.sAndP(f);
