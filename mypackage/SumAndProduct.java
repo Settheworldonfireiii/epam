@@ -38,7 +38,7 @@ public class SumAndProduct{
 
             sum+=a;
             prod = prod* a;
-              System.out.println("the sum is" + sum +", the product is " + prod);
+              System.out.println(sum + ' ' + prod);
 
       }
 }

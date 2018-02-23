@@ -1,53 +1,23 @@
 package mypackage;
 
-public class ArithmAndGeom{
-      public static void arAndG(int a){
-            int b= 100000;
-            double arithm =0 ;
-            double geom = 1;
-            int curnum;
-            
+public class ArithmAadGeom{
+      public static double ariThm(int a) {
+        int dig1 = a / 100000;
+        int dig2 = a % 100000 / 10000;
+        int dig3= a % 10000 / 1000;
+        int dig4 = a % 1000 / 100;
+        int dig5 = a % 100 / 10;
+        int dig6 = a % 10;
+        return (dig6 + dig5 + dig4 + dig3+ dig2 + dig1) / 6.0;
+    }
 
-            geom = geom*(double)(a - a%b)/100000;
-            curnum=(a - a%b)/100000;
-            a=a%b;
-            b=b/10;
-            arithm+=curnum;
-           
-            
-            geom = geom*(double)(a - a%b)/10000;
-            curnum=(a - a%b)/10000;
-            a=a%b;
-            b=b/10;
-            arithm+=curnum;
-            
-            
-            geom = geom*(double)(a - a%b)/1000;
-            curnum=(a - a%b)/1000;
-            a=a%b;
-            b=b/10;
-            arithm+=curnum;
-           
-            
-            geom = geom*(double)(a - a%b)/100;
-            curnum=(a - a%b)/100;
-            a=a%b;
-            b=b/10;
-            arithm+=curnum;
-           
-           
-            geom = geom*(double)(a - a%b)/10;
-            curnum=(a - a%b)/10;
-            a=a%b;
-            b=b/10;
-            arithm+=curnum;
-            
-            
-            arithm +=a;
-            geom = geom*(double)a;
-            arithm = arithm/6;
-            geom= Math.pow(geom, 1.0/6);
-              System.out.println("the arithmetic mean is" + arithm +", the geometric one is " + geom);
-
-      }
+     public static double geOm(int a) {
+        int dig1 = a / 100000;
+        int dig2 = a % 100000 / 10000;
+        int dig3= a % 10000 / 1000;
+        int dig4 = a % 1000 / 100;
+        int dig5 = a % 100 / 10;
+        int dig6 = a % 10;
+        return Math.pow((dig6 * dig5 * dig4 * dig3 * dig2 * dig1) , 1/6.0);
+    }
 }

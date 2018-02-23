@@ -2,53 +2,13 @@ package mypackage;
 
 public class InverseDigits{
       public static void inDig(int a){
-            int b= 1000000;
-            int curnum;
-            int invrs = 0;
-
-            curnum =(a - a%b)/1000000;
-            
-            a=a%b;
-            b=b/10;
-            invrs +=curnum*(int)Math.pow(10, 0);
-            
-
-             curnum =(a - a%b)/100000;
-             
-            a=a%b;
-            b=b/10;
-            invrs +=curnum*(int)Math.pow(10, 1);
-            
-
-             curnum =(a - a%b)/10000;
-             
-            a=a%b;
-            b=b/10;
-            invrs +=curnum*(int)Math.pow(10, 2);
-            
-             curnum =(a - a%b)/1000;
-             
-            a=a%b;
-            b=b/10;
-            invrs +=curnum*(int)Math.pow(10, 3);
-            
-
-             curnum =(a - a%b)/100;
-             
-            a=a%b;
-            b=b/10;
-            invrs +=curnum*(int)Math.pow(10, 4);
-           
-
-             curnum =(a - a%b)/10;
-             
-            a=a%b;
-            b=b/10;
-            invrs +=curnum*(int)Math.pow(10, 5);
-            
-            
-            invrs += a * (int)Math.pow(10, 6);
-            System.out.println("the inverse number is "  + invrs);
-
+          int dig1 = a / 1000000;
+          int dig2 = a % 1000000 / 100000;
+          int dig3= a % 100000 / 10000;
+          int dig4 = a % 10000 / 1000;
+          int dig5 = a % 1000 / 100;
+          int dig6= a % 100 / 10;
+          int dig7 = a % 10;
+          retura dig7 * 1000000 + dig6* 100000 + dig5 * 10000 + dig4 * 1000 + dig3* 100 + dig2 * 10 + dig1;
       }
 }
